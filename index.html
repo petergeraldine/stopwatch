@@ -1,66 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Stopwatch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="./manifest.json" />
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.json" />
 
-    <!-- iPhone PWA Support -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <link rel="apple-touch-icon" href="./assets/Logo.png" />
-
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-        background: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-      }
-
-      #time {
-        font-size: 64px;
-        font-weight: bold;
-        margin-bottom: 40px;
-      }
-
-      .buttons {
-        display: flex;
-        gap: 20px;
-      }
-
-      button {
-        font-size: 24px;
-        padding: 12px 24px;
-        border-radius: 10px;
-        border: none;
-        background: #007aff;
-        color: white;
-      }
-
-      button:active {
-        opacity: 0.7;
-      }
-    </style>
+    <!-- iPhone icon -->
+    <link rel="apple-touch-icon" href="/assets/Logo.png" />
+    <script type="module" crossorigin src="/assets/index-D4n6CA75.js"></script>
   </head>
 
   <body>
-    <div id="time">00:00.00</div>
-
-    <div class="buttons">
-      <button id="startStop">Start</button>
-      <button id="reset">Reset</button>
-    </div>
-
-    <script src="./stopwatch.js"></script>
+    <div id="root"></div>
   </body>
 </html>
