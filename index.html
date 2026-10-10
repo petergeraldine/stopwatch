@@ -38,6 +38,9 @@
       /* Force the RN Web app to fit inside the screen */
       #root > div {
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         max-height: 100%;
         overflow: hidden; /* prevents results from falling off-screen */
       }
