@@ -1,50 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stopwatch</title>
 
-  <title>Stopwatch</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
 
-  <!-- Manifest + Icons -->
-  <link rel="manifest" href="/stopwatch/manifest.json" />
-  <link rel="apple-touch-icon" href="/stopwatch/assets/Logo.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/stopwatch/assets/Logo.png" />
 
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: #0a1a3a; /* ⭐ This was your original perfect blue */
-    }
+    <script type="module" crossorigin src="/stopwatch/assets/index-BCiVsbfu.js"></script>
 
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #0a1a3a;
+      }
 
-    #root {
-      width: 100%;
-      max-width: 420px;
-      padding: 20px;
-      box-sizing: border-box;
-      background: transparent; /* ⭐ Your app supplies its own inner blue */
-    }
+      body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+      }
 
-    /* ⭐ The ONLY fix you originally needed */
-    .results {
-      font-size: 0.8rem;
-      line-height: 1.1;
-      overflow: hidden;
-      max-height: 150px;
-    }
-  </style>
-</head>
+      /* React Native Web root container */
+      #root {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
 
-<body>
-  <div id="root"></div>
+      /* Force the RN Web app to fit inside the screen */
+      #root > div {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-height: 100%;
+        overflow: hidden; /* prevents results from falling off-screen */
+      }
+    </style>
+  </head>
 
-  <script type="module" crossorigin src="/stopwatch/assets/index-BCiVsbfu.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
