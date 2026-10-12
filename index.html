@@ -14,17 +14,14 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      background: #0a1a3a; /* dark blue full-screen background */
+      background: #0a1a3a; /* ⭐ full-screen dark blue */
     }
 
     body {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: env(safe-area-inset-top)
-               env(safe-area-inset-right)
-               env(safe-area-inset-bottom)
-               env(safe-area-inset-left);
+      /* ⭐ remove safe-area padding for now — it caused side borders */
     }
 
     #root {
@@ -32,6 +29,7 @@
       max-width: 420px;
       padding: 20px;
       box-sizing: border-box;
+      background: transparent; /* ⭐ ensure no inner background causes borders */
     }
 
     .results {
