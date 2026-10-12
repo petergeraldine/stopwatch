@@ -6,6 +6,7 @@
 
   <title>Stopwatch</title>
 
+  <!-- Manifest + Icons -->
   <link rel="manifest" href="/stopwatch/manifest.json" />
   <link rel="apple-touch-icon" href="/stopwatch/assets/Logo.png" />
 
@@ -14,14 +15,13 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      background: #0a1a3a; /* ⭐ full-screen dark blue */
+      background: #0a1a3a; /* ⭐ This was your original perfect blue */
     }
 
     body {
       display: flex;
       justify-content: center;
       align-items: center;
-      /* ⭐ remove safe-area padding for now — it caused side borders */
     }
 
     #root {
@@ -29,9 +29,10 @@
       max-width: 420px;
       padding: 20px;
       box-sizing: border-box;
-      background: transparent; /* ⭐ ensure no inner background causes borders */
+      background: transparent; /* ⭐ Your app supplies its own inner blue */
     }
 
+    /* ⭐ The ONLY fix you originally needed */
     .results {
       font-size: 0.8rem;
       line-height: 1.1;
