@@ -8,6 +8,7 @@
           content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
 
     <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0a1a3a" />
     <link rel="apple-touch-icon" href="/stopwatch/assets/Logo.png" />
 
     <script type="module" crossorigin src="/stopwatch/assets/index-BCiVsbfu.js"></script>
@@ -51,7 +52,28 @@
     </style>
   </head>
 
-  <body>
-    <div id="root"></div>
-  </body>
+ <body>
+
+<div id="root"></div>
+
+<script>
+
+if ('serviceWorker' in navigator) {
+
+window.addEventListener('load', () => {
+
+navigator.serviceWorker.register('/sw.js')
+
+.then(() => console.log('Service Worker registered'))
+
+.catch(err => console.log(err));
+
+});
+
+}
+
+</script>
+
+</body>
+
 </html>
